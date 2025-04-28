@@ -1,0 +1,15 @@
+query getProductInfo($sku: ID! ){
+  product(identifier: {
+    field: sku
+    value: $sku
+  }) {
+    items {
+      kitItems {
+        itemId
+        product {
+          productName
+        }
+      }
+    }
+  }
+}
